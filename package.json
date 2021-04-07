@@ -1,0 +1,23 @@
+{
+  "name": "reactbnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jowoojun/Reactbnb.git"
+  },
+  "author": "jowoojun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jowoojun/Reactbnb/issues"
+  },
+  "homepage": "https://github.com/jowoojun/Reactbnb#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
