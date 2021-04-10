@@ -70,10 +70,8 @@ React.js와 next.js와 같은 Front-end 공부를 위한 토이프로젝트
 
 ### 기술 참고
 
-[React로 NodeBird SNS 만들기](https://www.inflearn.com/course/react_nodebird/dashboard)
-
 ### 디자인 참고
 
-[Twitter](https://twitter.com/home?lang=ko)
+[Airbnb](https://www.airbnb.co.kr/)
 
 [Ant Design](https://ant.design/)
