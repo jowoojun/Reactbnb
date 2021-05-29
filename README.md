@@ -73,5 +73,3 @@ React.js와 next.js와 같은 Front-end 공부를 위한 토이프로젝트
 ### 디자인 참고
 
 [Airbnb](https://www.airbnb.co.kr/)
-
-[Ant Design](https://ant.design/)
