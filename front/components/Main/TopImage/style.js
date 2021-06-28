@@ -4,16 +4,12 @@ import theme, { flexSet } from '../../Styles/Theme';
 export const Container = styled.div`
   flex: 1;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-
   > div {
     &:first-child {
       div {
         width: 100%;
-
         img {
           margin-left: auto;
           margin-right: auto;
@@ -71,8 +67,17 @@ export const Container = styled.div`
     > div {
       &:last-child {
         position: absolute;
-        top: 260px;
+        top: 240px;
         left: 20px;
+      }
+    }
+  }
+  @media only screen and (min-width: 425px) {
+    > div {
+      &:last-child {
+        position: absolute;
+        top: 350px;
+        left: 30px;
       }
     }
   }
