@@ -1,33 +1,20 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Container } from './style';
 
-const TopImage = () => {
-  const [windowSize, setWindowSize] = useState(null);
+const TopImage = (windowSize) => {
   const [imageSrc, setImageSrc] = useState('https://a0.muscache.com/im/pictures/8096fa47-0535-49d2-9aca-8db39b3faacd.jpg?im_w=320');
 
-  const getWindowSize = useCallback(() => {
-    const width = document.body.clientWidth;
-    setWindowSize(width);
-  }, []);
-
   useEffect(() => {
-    getWindowSize();
-  });
-
-  useEffect(() => {
-    window.addEventListener('resize', getWindowSize);
+    console.log(windowSize);
     if (windowSize > 1440) {
       setImageSrc('https://a0.muscache.com/im/pictures/415fe2dc-98a1-4565-a702-70b03ae757d7.jpg?im_w=2560');
     } else if (windowSize > 950) {
       setImageSrc('https://a0.muscache.com/im/pictures/415fe2dc-98a1-4565-a702-70b03ae757d7.jpg?im_w=960');
-    } else if (windowSize > 744) {
+    } else if (windowSize > 425) {
       setImageSrc('https://a0.muscache.com/im/pictures/415fe2dc-98a1-4565-a702-70b03ae757d7.jpg?im_w=720');
     } else {
       setImageSrc('https://a0.muscache.com/im/pictures/8096fa47-0535-49d2-9aca-8db39b3faacd.jpg?im_w=320');
     }
-    return () => {
-      window.removeEventListener('resize', getWindowSize);
-    };
   }, [windowSize]);
 
   return (
