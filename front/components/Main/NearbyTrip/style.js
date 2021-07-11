@@ -4,6 +4,7 @@ import { flexSet } from '../../Styles/Theme';
 export const Container = styled.div`
   flex: 0.5;
   padding: 0px;
+  margin-bottom: 40px;
   > h2 {
     padding-left: 20px;
     font-size: 22px;

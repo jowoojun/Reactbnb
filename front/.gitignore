@@ -107,6 +107,7 @@ dist
 .vscode-test
 
 package-lock.json
+data/
 
 .vscode
 *.pem
