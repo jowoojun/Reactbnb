@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { MainContainer } from '../components/Main/style';
 import TopImage from '../components/Main/TopImage';
 import NearbyTrip from '../components/Main/NearbyTrip';
+import RecommnedTrip from '../components/Main/RecommnedTrip';
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(null);
@@ -27,6 +28,7 @@ const Home = () => {
     <MainContainer>
       <TopImage windowSize={windowSize} />
       <NearbyTrip windowSize={windowSize} />
+      <RecommnedTrip windowSize={windowSize} />
     </MainContainer>
   );
 };
