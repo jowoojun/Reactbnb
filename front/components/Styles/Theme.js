@@ -24,4 +24,19 @@ export const visibilityHidden = css`
   visibility: hidden !important;
 `;
 
+export const SectionAttr = css`
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+`;
+
+export const FontColor = css`
+  color: rgb(34, 34, 34)
+`;
+
+export const ButtonColor = css`
+  color: rgb(255, 255, 255)
+`;
+
 export default theme;
