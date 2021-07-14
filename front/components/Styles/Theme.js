@@ -35,6 +35,10 @@ export const FontColor = css`
   color: rgb(34, 34, 34)
 `;
 
+export const FontWhiteColor = css`
+  color: rgb(255, 255, 255)
+`;
+
 export const ButtonColor = css`
   color: rgb(255, 255, 255)
 `;
