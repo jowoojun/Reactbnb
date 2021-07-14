@@ -6,6 +6,7 @@ import NearbyTrip from '../components/Main/NearbyTrip';
 import RecommnedTrip from '../components/Main/RecommnedTrip';
 import TripIdea from '../components/Main/TripIdea';
 import ExperienceRecommendation from '../components/Main/ExperienceRecommendation';
+import StartHosting from '../components/Main/StartHosting';
 
 const Home = () => {
   const [windowSize, setWindowSize] = useState(null);
@@ -33,6 +34,7 @@ const Home = () => {
       <RecommnedTrip windowSize={windowSize} />
       <TripIdea windowSize={windowSize} />
       <ExperienceRecommendation windowSize={windowSize} />
+      <StartHosting windowSize={windowSize} />
     </MainContainer>
   );
 };
