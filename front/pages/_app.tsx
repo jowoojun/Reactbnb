@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { AppProps } from 'next/app';
 
 import GlobalStyle from '../components/Styles/GlobalStyle';
+import NavTab from '../components/NavTab';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -11,6 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       <title>React Twitter</title>
     </Head>
     <GlobalStyle />
+    <NavTab />
     <Component {...pageProps} />
   </>
 );
