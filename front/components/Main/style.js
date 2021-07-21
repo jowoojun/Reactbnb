@@ -6,3 +6,10 @@ export const MainContainer = styled.div`
   margin: 0;
   padding: 0;
 `;
+export const SearchBarContainer = styled.div`
+  display: block !important;
+`;
+export const ContentsContainer = styled.div`
+  display: block;
+  min-height: 400px;
+`;

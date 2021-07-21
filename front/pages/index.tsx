@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-import { MainContainer } from '../components/Main/style';
+import { SearchBarContainer, ContentsContainer } from '../components/Main/style';
+import SearchBar from '../components/Main/SearchBar';
 import TopImage from '../components/Main/TopImage';
 import NearbyTrip from '../components/Main/NearbyTrip';
 import RecommnedTrip from '../components/Main/RecommnedTrip';
@@ -28,14 +29,19 @@ const Home = () => {
   }, [windowSize]);
 
   return (
-    <MainContainer>
-      <TopImage windowSize={windowSize} />
-      <NearbyTrip windowSize={windowSize} />
-      <RecommnedTrip windowSize={windowSize} />
-      <TripIdea windowSize={windowSize} />
-      <ExperienceRecommendation windowSize={windowSize} />
-      <StartHosting windowSize={windowSize} />
-    </MainContainer>
+    <main>
+      <SearchBarContainer>
+        <SearchBar windowSize={windowSize} />
+      </SearchBarContainer>
+      <ContentsContainer>
+        <TopImage windowSize={windowSize} />
+        <NearbyTrip windowSize={windowSize} />
+        <RecommnedTrip windowSize={windowSize} />
+        <TripIdea windowSize={windowSize} />
+        <ExperienceRecommendation windowSize={windowSize} />
+        <StartHosting windowSize={windowSize} />
+      </ContentsContainer>
+    </main>
   );
 };
 
