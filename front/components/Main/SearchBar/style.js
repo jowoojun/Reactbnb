@@ -11,7 +11,7 @@ export const SearchBarIconStyle = css`
 `;
 
 export const SearchBarContainer = styled.div`
-  position: absolute !important;
+  position: absolute;
   width: 100% !important;
   z-index: 100 !important;
   transition: background-color 0.4s cubic-bezier(0.35, 0, 0.65, 1) 0s !important;

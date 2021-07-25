@@ -3,17 +3,24 @@ import React from 'react';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import useScrollY from '../../../hooks/UseScrollY';
 import {
   SearchBarContainer, SearchBarLayout, SearchBarArea, SearchBarFrame, SearchBarForm,
   SearchBarFormFrame, SearchBarLabel, SearchBarTitle, SearchBarInput, SearchBarIconContainer,
   SearchBarIconStyle, SearchBarInputTextBox,
 } from './style';
 
+const BarFix = {
+  position: 'fixed',
+  top: '0px',
+  backgroundColor: 'rgb(255, 255, 255)',
+};
+
 const SearchBar = (windowSize) => {
-  const height = 200;
+  const scrollY = useScrollY();
 
   return (
-    <SearchBarContainer>
+    <SearchBarContainer style={scrollY !== 0 ? BarFix : {}}>
       <SearchBarLayout>
         <SearchBarArea>
           <SearchBarFrame>
