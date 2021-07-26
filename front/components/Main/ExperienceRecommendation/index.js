@@ -2,8 +2,8 @@ import React from 'react';
 
 import {
   Container, Content, ContentImage, ContentImagePicture, ContentTopic, ContentWapper, ContentDesc,
+  ContentTitle, ContentSubtitle
 } from './style';
-import { ContentTitle, ContentSubTitle } from '../../Styles/Font';
 
 import ExperienceCategories from '../../../data/ExperienceCategories.json';
 
@@ -21,7 +21,7 @@ const ExperienceRecommendation = (windowSize) => {
               </div>
             </h1>
             <div>
-              <ContentSubTitle>현지 전문가와 함께하는 독특한 액티비티에 오프라인이나 온라인으로 참여해&nbsp;보세요.</ContentSubTitle>
+              <ContentSubtitle>현지 전문가와 함께하는 독특한 액티비티에 오프라인이나 온라인으로 참여해&nbsp;보세요.</ContentSubtitle>
             </div>
           </ContentTopic>
         </section>

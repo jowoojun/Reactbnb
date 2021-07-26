@@ -1,149 +1,137 @@
-import styled from 'styled-components';
-import theme, { flexSet } from '../../Styles/Theme';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  flex: 1;
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
-  > div {
-    &:first-child {
-      div {
-        width: 100%;
-        img {
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-    }
-    &:last-child {
-      position: absolute;
-      top: 230px;
-      left: 20px;
-      
-      ${flexSet('flex-start', 'flex-start', 'column')}
-      > p {
-        font-weight: 700;
-        button {
-          margin-left: 5px;
-          margin-bottom: 2px;
-          width: 40px;
-          height: 20px;
-          border: 0px;
-          border-radius: 5px;
-          background-color: ${theme.blackText};
-          p {
-            font-weight: 700;
-            color: ${theme.whiteText};
-          }
-        }
-      }
-      span {
-        max-width: 383px;
-        max-height: 112px;
-        font-size: 32px;
-        color: ${theme.blackText};
-        font-weight: 700;
-      }
+import theme, {
+  flexSet, FontColor, FontWhiteColor, SectionAttr,
+} from '../../Styles/Theme';
+import {
+  WapperVariables, ContextVariables, ContextContainerVariables,
+  TextVariables, ButtonVariables,
+} from './variables';
+import { ButtonText, ContentTitleFrame } from '../../Styles/Font';
+import { SingleContentButton } from '../../Styles/SingleContent';
 
-      > button {
-        width: 145px;
-        height: 36px;
-        margin-top: 12px;
-        padding: 7px 15px;
-        border: 0px;
-        border-radius: 10px;
-        background-color: ${theme.blackText};
-        div {
-          font-size: 13px;
-          font-weight: 700;
-          color: ${theme.whiteText};
-        }
-      }
-    }
-  }
+export const Container = styled.section`
+  ${SectionAttr}
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-bottom: 36px;
+`;
 
-  @media only screen and (min-width: 320px) {
-    > div {
-      &:last-child {
-        position: absolute;
-        top: 240px;
-        left: 20px;
-      }
-    }
-  }
-  @media only screen and (min-width: 425px) {
-    > div {
-      &:last-child {
-        position: absolute;
-        top: 350px;
-        left: 30px;
-      }
-    }
-  }
-  @media only screen and (min-width: 720px) {
-    > div {
-      &:last-child {
-        position: absolute;
-        top: 300px;
-        left: 20px;
-      }
-    }
-  }
-  @media only screen and (min-width: 960px) {
-    > div {
-      &:last-child {
-        top: 400px;
-        left: 30px;
-        > p {
-          font-size: 24px;
-          button {
-            width: 60px;
-            height: 26px;
-            p {
-              font-size: 22px;
-            }
-          }
-        }
-        span {
-          font-size:42px;
-        }
-        > button {
-          width: 210px;
-          height: 46px;
-          div {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-  @media only screen and (min-width: 1440px) {
-    > div {
-      &:last-child {
-        top: 550px;
-        left: 40px;
-        > p {
-          font-size: 32px;
-          button {
-            width: 72px;
-            height: 36px;
-            p {
-              font-size: 28px;
-            }
-          }
-        }
-        span {
-          font-size: 48px;
-        }
-        > button {
-          width: 250px;
-          height: 52px;
-          div {
-            font-size: 24px;
-          }
-        }
-      }
-    }
-  }
+export const WapperContainer = styled.div`
+  ${WapperVariables}
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  height: calc(var(--hc-sm-height, 4) / var(--hc-sm-width, 3) * 100vw) !important;
+`;
+
+export const ImageContainer = styled.div`
+  z-index: 0 !important;
+  position: absolute !important;
+  top: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+`;
+
+export const ImagePosition = styled.div`
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: inline-block !important;
+  vertical-align: bottom !important;
+  min-height: 1px !important;
+  position: relative !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat !important;
+`;
+
+export const TitleImage = styled.img`
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  vertical-align: bottom;
+`;
+
+export const ContextContainer = styled.div`
+  position: relative !important;
+  width: 100% !important;
+  max-width: 1760px !important;
+  padding: 96px 24px 32px !important;
+`;
+
+export const ContextPosition = styled.div`
+  ${ContextVariables}
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: var(--ac-sm-align-items, center) !important;
+  justify-content: var(--ac-sm-justify-content, flex-start) !important;
+`;
+
+export const ContextWapper = styled.div`
+  ${ContextVariables}  
+  display: flex !important;
+  z-index: 0 !important;
+  flex-direction: column !important;
+  align-items: var(--ac-sm-tc-align-items, flex-start) !important;
+  text-align: var(--ac-sm-tc-text-align, start) !important;
+`;
+
+export const ContextTextContainer = styled.div`
+  ${ContextContainerVariables}
+  display: flex;
+  justify-content: var(--ccv-justify-content, flex-start);
+  text-align: var(--ccv-text-align, start);  
+  align-items: var(--ccv-align-items, center);
+  padding-top: var(--ccv-padding-top, 12px);
+  padding-right: var(--ccv-padding-right, 4px);
+  padding-bottom: var(--ccv-padding-bottom, 12px);
+  padding-left: var(--ccv-padding-left, 4px);
+  max-height: var(--ccv-max-height, 100%);
+  max-width: var(--ccv-max-width, 100%);
+  background-color: var(--ccv-background-color, undefined);
+`;
+
+export const ContextText = styled.span`
+  ${TextVariables}
+  ${ContentTitleFrame}
+`;
+
+export const ContextButton = styled.a`
+  ${SingleContentButton}
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: black !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  color: black !important;  
+  border: none !important;  
+`;
+
+export const ContextButtonContainer = styled.div`
+  justify-content: var(--ehcta-justify-content, flex-start) !important;
+  align-items: var(--ehcta-align-items, center) !important;
+  padding-top: var(--ehcta-padding-top, 8px) !important;
+  padding-right: var(--ehcta-padding-trailing, 16px) !important;
+  padding-bottom: var(--ehcta-padding-bottom, 8px) !important;
+  padding-left: var(--ehcta-padding-leading, 16px) !important;
+  max-height: var(--ehcta-max-height, 100%) !important;
+  max-width: var(--ehcta-max-width, 100%) !important;
+  background-color: var(--ehcta-background-color, #222222) !important;
+  border-radius: 8px !important;
+`;
+
+export const ContentButtonText = styled.span`
+  ${ButtonVariables}
+  ${ButtonText}
 `;

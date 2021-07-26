@@ -6,6 +6,24 @@ import {
   MultiContentImgSildeFrame, MultiContentFrame, MultiContentImageFrame,
   MultiContentImagePictureFrame, MultiContentDescFrame,
 } from '../../Styles/Content';
+import {
+  ContentTitleFrame, ContentSubtitleFrame,
+} from '../../Styles/Font';
+
+export const TitleVariables = css`
+  --tl-color:#222222; 
+  --tl-font-size:22px;
+  --tl-font-weight:700; 
+  --tl-letter-spacing:-0.02em; 
+  --tl-line-height:28px;
+`;
+
+export const SubtitleVariables = css`
+  --tl-color:#222222; 
+  --tl-font-size:18px;
+  --tl-font-weight:400; 
+  --tl-line-height:24px;
+`;
 
 export const Container = styled.section`
   ${SectionAttr}
@@ -21,6 +39,16 @@ export const ContentTopic = styled.div`
     margin: 0px !important;
     padding: 0px !important;
   }
+`;
+
+export const ContentTitle = styled.span`
+  ${ContentTitleFrame}
+  ${TitleVariables}
+`;
+
+export const ContentSubtitle = styled.span`
+  ${ContentSubtitleFrame}
+  ${SubtitleVariables}
 `;
 
 export const ContentWapper = styled.div`
