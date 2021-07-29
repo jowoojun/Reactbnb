@@ -5,6 +5,8 @@ import { AppProps } from 'next/app';
 import GlobalStyle from '../components/Styles/GlobalStyle';
 import NavTab from '../components/NavTab';
 
+import wrapper from '../store/configureStore';
+
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
@@ -17,4 +19,4 @@ const App = ({ Component, pageProps }: AppProps) => (
   </>
 );
 
-export default App;
+export default wrapper.withRedux(App);
