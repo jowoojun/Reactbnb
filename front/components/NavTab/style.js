@@ -20,7 +20,7 @@ export const NavContainer = styled.nav`
   overflow: hidden !important;
   position: fixed !important;
   right: 0px !important;
-  z-index: 100 !important;
+  z-index: 1000 !important;
   transition: -ms-transform 0.2s cubic-bezier(0, 0, 0.1, 1) 0s, -webkit-transform 0.2s cubic-bezier(0, 0, 0.1, 1) 0s, transform 0.2s cubic-bezier(0, 0, 0.1, 1) 0s, visibility 0s ease 0s !important;
 `;
 

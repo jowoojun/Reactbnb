@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   faSearch, faHeart, faSuitcaseRolling, faComments, faUser,
@@ -33,12 +34,13 @@ const NavHide = {
 
 const NavTab = () => {
   const scrollDirection = useScrollDirection();
+  const { searchBarStatus } = useSelector((state) => state.components);
 
   return (
-    <NavContainer style={scrollDirection === 'down' ? NavHide : {}}>
+    <NavContainer style={scrollDirection === 'up' || searchBarStatus ? {} : NavHide}>
       <NavWrap>
         {arr.map((link) => (
-          <NavLink href={link.href}>
+          <NavLink key={link.href.concat(link.desc)} href={link.href}>
             <NavIconContainer>
               <FontAwesomeIcon icon={link.icon} style={IconStyle} />
             </NavIconContainer>
