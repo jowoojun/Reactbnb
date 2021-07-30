@@ -1,15 +1,5 @@
 import styled, { css } from 'styled-components';
 
-export const SearchBarIconStyle = css`
-  display: block;
-  fill: none;
-  height: 16px;
-  width: 16px;
-  stroke: currentcolor;
-  stroke-width: 4;
-  overflow: visible;
-`;
-
 export const SearchBarContainer = styled.div`
   position: absolute;
   width: 100% !important;
@@ -19,32 +9,66 @@ export const SearchBarContainer = styled.div`
 `;
 
 export const SearchBarLayout = styled.div`
-  -webkit-box-align: center !important;
   display: flex !important;
   align-items: center !important;
   padding-top: 16px !important;
   padding-left: 24px !important;
   padding-right: 24px !important;
+  ${({ focus }) => focus && `
+    background: rgb(255, 255, 255) !important;
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+  `}
 `;
 
 export const SearchBarArea = styled.div`
-  -webkit-box-align: stretch !important;
   display: flex !important;
   align-items: stretch !important;
   height: 48px !important;
   width: 100% !important;
+  ${({ focus }) => focus && `
+    transform: translate3d(0px, 0px, 0px) !important;
+  `}
+`;
+
+export const SearchBarButtonBox = styled.div`
+  align-items: stretch !important;
+  display: flex !important;
+  flex-shrink: 0 !important;
+  margin-right: 16px !important;
+`;
+
+export const SearchBarButton = styled.button`
+  appearance: none !important;
+  display: inline-block !important;
+  border-radius: 50% !important;
+  border: none !important;
+  outline: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  color: rgb(34, 34, 34) !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  position: relative !important;
+  background: transparent !important;
+`;
+
+export const SearchBarButtonIconBox = styled.div`
+  position: relative !important;
 `;
 
 export const SearchBarFrame = styled.div`
-  -webkit-box-flex: 1 !important;
-  -webkit-box-align: center !important;
   align-items: center !important;
   background-color: rgb(255, 255, 255) !important;
   border: 1px solid rgb(255, 255, 255) !important;
   border-radius: 24px !important;
   display: flex !important;
   flex-grow: 1 !important;
-  box-shadow: rgb(0 0 0 / 15%) 0px 5px 12px !important;
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 12px !important;    
+  ${({ focus }) => focus && `
+    border: 0px !important;
+    box-shadow: none !important;
+  `}
 `;
 
 export const SearchBarForm = styled.form`
@@ -54,8 +78,6 @@ export const SearchBarForm = styled.form`
 export const SearchBarFormFrame = styled.div`
   width: 100% !important;
   height: 100% !important;
-  padding-left: 12px !important;
-  padding-right: 4px !important;
   position: relative !important;
 `;
 
@@ -80,17 +102,25 @@ export const SearchBarTitle = styled.span`
 `;
 
 export const SearchBarInput = styled.input`
-  font-size: 16px !important;
-  line-height: 20px !important;
-  font-weight: 400 !important;
-  background: none !important;
-  border: 0px !important;
-  color: #222222 !important;
-  margin: 0px !important;
-  height: 100% !important;
   width: 100% !important;
+  min-height: 1px !important;
+  border: none !important;
+  outline: none !important;
+  margin: 0px !important;
+  color: #222222 !important;
+  background-color: transparent !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  height: 100% !important;
   text-overflow: ellipsis !important;
-  padding: 0 8px !important;
+  
+  ${({ focus }) => focus && `
+    color: rgb(34, 34, 34) !important;
+    padding-right: 36px !important;
+  `}
 `;
 
 export const SearchBarInputTextBox = styled.div`
