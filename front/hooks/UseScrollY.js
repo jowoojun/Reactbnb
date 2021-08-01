@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const UseScrollY = () => {
+const useScrollY = () => {
   const [offset, setOffset] = useState(0);
 
   const toggleScrollY = () => {
@@ -18,4 +18,4 @@ const UseScrollY = () => {
   return offset;
 };
 
-export default UseScrollY;
+export default useScrollY;
