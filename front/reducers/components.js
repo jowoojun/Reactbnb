@@ -7,7 +7,7 @@ export const initialState = {
 export const OPEN_SEARCHBAR = 'OPEN_SEARCHBAR';
 export const CLOSE_SEARCHBAR = 'CLOSE_SEARCHBAR';
 
-export default (state = initialState, action) => produce(state, (draft) => {
+const Components = (state = initialState, action) => produce(state, (draft) => {
   switch (action.type) {
   case OPEN_SEARCHBAR: {
     console.log(OPEN_SEARCHBAR);
@@ -23,3 +23,5 @@ export default (state = initialState, action) => produce(state, (draft) => {
     break;
   }
 });
+
+export default Components;
