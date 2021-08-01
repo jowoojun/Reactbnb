@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const UseScrollDirection = () => {
+const useScrollDirection = () => {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [prevOffset, setPrevOffset] = useState(0);
 
@@ -27,4 +27,4 @@ const UseScrollDirection = () => {
   return scrollDirection;
 };
 
-export default UseScrollDirection;
+export default useScrollDirection;
