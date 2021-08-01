@@ -8,13 +8,11 @@ import LocationCategoriesData from '../../../data/RecommendCategories.json';
 
 const RecommendTrip = (windowSize) => {
   const mainLocationCategories = LocationCategoriesData.data;
-  const myTheme = {
-    
-  }
+  
   return (
     <Container>
       <ContentTopic>
-        <h1 tabindex="-1">
+        <h1 tabIndex="-1">
           <div>
             <span>어디에서나, 여행은 살아보는&nbsp;거야!</span>
           </div>
