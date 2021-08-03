@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { OPEN_SEARCHBAR, CLOSE_SEARCHBAR } from '../../../reducers/components';
 
-import useScrollY from '../../../hooks/UseScrollY';
+import useScrollY from '../../../hooks/useScrollY';
 import useInput from '../../../hooks/useInput';
 import useDisableBodyScroll from '../../../hooks/useDisableBodyScroll';
 
@@ -16,28 +16,13 @@ import {
   SearchBarFormFrame, SearchBarLabel, SearchBarTitle, SearchBarInput, SearchBarIconContainer,
   SearchBarInputTextBox, SearchBarButtonBox, SearchBarButton, SearchBarButtonIconBox,
 } from './style';
-
-const BarFix = {
-  position: 'fixed',
-  top: '0px',
-  backgroundColor: 'rgb(255, 255, 255)',
-};
-
-const IconStyle = {
-  display: 'block',
-  fill: 'none',
-  height: '16px',
-  width: '16px',
-  stroke: 'currentcolor',
-  strokeWidth: '4',
-  overflow: 'visible',
-};
+import { BarFixStyle, IconStyle } from './variables';
 
 const SearchBar = (windowSize) => {
   const dispatch = useDispatch();
-  const scrollY = useScrollY();
   const { searchBarStatus } = useSelector((state) => state.components);
   const [searchInput, onChangeSearchInput, setSearchInput] = useInput('');
+  const scrollY = useScrollY();
   useDisableBodyScroll(searchBarStatus);
 
   const onFocus = useCallback(() => {
@@ -55,12 +40,8 @@ const SearchBar = (windowSize) => {
     });
   }, []);
 
-  const onChange = useCallback(() => {
-    console.log('onChange');
-  }, []);
-
   return (
-    <SearchBarContainer style={scrollY !== 0 ? BarFix : {}}>
+    <SearchBarContainer style={scrollY !== 0 ? BarFixStyle : {}}>
       <SearchBarLayout focus={searchBarStatus}>
         <SearchBarArea focus={searchBarStatus}>
           {searchBarStatus && (

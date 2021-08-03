@@ -17,7 +17,7 @@ const NearbyTrip = (windowSize) => {
               <div key={num}>
                 <a href="/">
                   <figure>
-                    <img src={content.img} alt="" />
+                    <img src={content.img.concat('?im_q=medq&im_w=240')} alt="" />
                   </figure>
                   <div>
                     <span><b>{content.name}</b></span>
